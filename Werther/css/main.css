@@ -1,0 +1,56 @@
+* {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-feature-settings: "liga", "onum";
+  -moz-font-feature-settings: "liga", "onum";
+  font-feature-settings: "liga", "onum";
+  font-size: 16px;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  font-family: "GT Sectra Fine", -apple-system, BlinkMacSystemFont, Helvetica, Arial, Roboto, "Segoe UI", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: -webkit-calc(1vmax * 1.4);
+  font-size: calc(1vmax * 1.4);
+  line-height: 1.46em;
+  color: #000;
+}
+
+body {
+  width: 60vw;
+  padding-top: -webkit-calc(1.46em * 2);
+  padding-top: calc(1.46em * 2);
+  padding-left: -webkit-calc(1.46em * 3);
+  padding-left: calc(1.46em * 3);
+}
+
+p {
+  margin-bottom: 1.46em;
+}
+
+.context {
+  display: inline-block;
+  color: #DE4956;
+  font-style: italic;
+}
+
+.name {
+  display: inline-block;
+  font-family: "GT Sectra Fine";
+  font-size: 1em;
+  font-weight: 700;
+  width: 6em;
+}
+
+/*# sourceMappingURL=main.css.map */

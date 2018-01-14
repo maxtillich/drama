@@ -1,0 +1,78 @@
+@import url("https://use.typekit.net/dcd0bmy.css");
+@import url('https://fonts.googleapis.com/css?family=Astloch:400,700');
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "liga", "onum";
+  font-size: 16px;
+}
+//
+// body {
+//   height: 100%;
+//   margin: 0;
+//   font-family: 'Astloch', "eskapade-fraktur", "alexander-quill", -apple-system, BlinkMacSystemFont, Helvetica, Arial, Roboto, "Segoe UI", sans-serif;
+//   font-weight: 900;
+//   font-style: normal;
+//   font-size: calc(1vmax * 3.9);
+//   line-height: 1.1em;
+//   color: #fff;
+//   background: #DB2727 url(../img/stripes.svg) no-repeat center -3em;
+//   background-size: 70%;
+//   background-attachment: fixed;
+// }
+//
+// h1 {
+//   font-family: "eskapade-fraktur";
+//   font-size: 6.8em;
+//   line-height: .78em;
+//   font-weight: 900;
+//   text-shadow: 3px 0 0 #fff;
+//   display: inline-block;
+//   transform: rotate(-9deg);
+//   font-style: italic;
+//   margin: .1em 0;
+//   margin-left: -.1em;
+//   letter-spacing: -0.03em;
+// }
+//
+// p {
+//   margin-bottom: 1.46em;
+// }
+//
+// .context {
+//   display: inline-block;
+//   font-family: "eskapade";
+//   // font-size: .87em;
+//   color: #DE4956;
+//   font-style: italic;
+// }
+//
+// .name {
+//   display: inline-block;
+//   //font-family: "GT Sectra Fine";
+//   font-weight: 700;
+//   //width: 6em;
+//   //margin-right: 1em;
+//   //text-transform: uppercase;
+//   //font-size: .6em;
+// }
+//
+// .intro {
+//   width: 50vw;
+//   margin: 0 auto;
+//   text-align: center;
+// }
+//
+// .dialogue {
+//   font-size: calc(1vmax * 3.9);
+// }
