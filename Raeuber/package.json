@@ -5,7 +5,7 @@
   "private": true,
   "devDependencies": {
     "babel-preset-env": "^1.6.1",
-    "grunt": "~0.4.5",
+    "grunt": "^0.4.5",
     "grunt-autoprefixer": "~0.2.20130806",
     "grunt-babel": "^7.0.0",
     "grunt-contrib-cssmin": "^1.0.1",
