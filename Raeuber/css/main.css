@@ -7,7 +7,7 @@
 * {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  cursor: url("img/cursor/hand.png"),default;
+  cursor: url("../img/cursor/arm.png"),default;
 }
 
 html {
@@ -25,15 +25,17 @@ html {
 
 body {
   padding: 1vw 15vw 12vw 15vw;
-  background: #888 url(../img/amalia.jpg) center center;
   color: #33FFC2;
   font-family: "Schwabacher Grotesk";
   font-size: -webkit-calc(1vmax * 2.1);
   font-size: calc(1vmax * 2.1);
   line-height: 1.3;
-  background-size: 41%;
-  background-repeat: no-repeat;
   overflow-x: hidden;
+  background-color: #888;
+  background-image: url(../img/galgen.png);
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: auto 93.6vh;
 }
 
 p {
@@ -61,7 +63,7 @@ p:nth-child(odd) {
 .kapitel {
   text-align: center;
   font-family: "eskapade-fraktur";
-  font-size: 15em;
+  font-size: 14.25em;
   line-height: .82em;
   font-weight: 900;
   display: block;
@@ -81,6 +83,7 @@ p:nth-child(odd) {
   z-index: 1;
   font-style: italic;
   color: red;
+  font-family: "Schwabacher Grotesk";
   font-size: 24rem;
   font-weight: bold;
   line-height: 1;
@@ -89,7 +92,7 @@ p:nth-child(odd) {
   color: tan;
   color: #888;
   text-shadow: 2px -1px 0 blue;
-  top: .495em;
+  top: .522em;
   right: -1em;
   z-index: -1;
   -webkit-transition: all ease-out 1.6s;
@@ -175,21 +178,7 @@ p:nth-child(odd) {
   width: 102vw;
 }
 
-.bild-amalia {
-  position: absolute;
-  top: 50%;
-  left: 60%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  width: 600px;
-  height: 600px;
-  background: url(img/amalia.jpg) no-repeat center center;
-  background-size: cover;
-  background-blend-mode: lighten;
-}
-
-.spasti {
+.blend-test {
   position: fixed;
   top: 0;
   right: 0;
@@ -206,14 +195,43 @@ p:nth-child(odd) {
 }
 
 .memento {
-  font-size: 2.5em;
-  text-align: right;
-  line-height: .78em;
-  opacity: 1;
-  color: antiquewhite;
-  letter-spacing: -.03em;
-  top: -.6em;
-  right: -.5em;
+  display: block;
+  position: fixed;
+  top: 10px;
+  left: 10px;
+}
+
+.spot {
+  position: fixed;
+  z-index: 2;
+  width: 10vw;
+  height: 10vw;
+  background: yellow;
+  overflow: visible;
+  text-align: center;
+}
+
+.spot img {
+  border: 0;
+  display: inline-block;
+  margin: 0;
+  width: 100%;
+}
+
+.spot-1 {
+  top: 8vh;
+  left: 6.5vw;
+}
+
+.spot-2 {
+  top: 8vh;
+  right: 6.5vw;
+}
+
+.spot-3 {
+  top: auto;
+  bottom: 8vh;
+  right: 6.5vw;
 }
 
 /*# sourceMappingURL=main.css.map */
