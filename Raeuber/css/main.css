@@ -1,9 +1,18 @@
 @import url("https://use.typekit.net/dcd0bmy.css");
+
 @import url("https://fonts.googleapis.com/css?family=Astloch:400,700");
+
+@import url("https://fonts.googleapis.com/css?family=Nova+Mono");
+
 * {
-  -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
+<<<<<<< HEAD
   box-sizing: border-box; }
+=======
+  box-sizing: border-box;
+  cursor: url("img/cursor/hand.png"),default;
+}
+>>>>>>> 0856ccf034065ea70a061f782916e45d307b363c
 
 html {
   height: 100%;
@@ -11,103 +20,178 @@ html {
   padding: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  -webkit-font-feature-settings: "liga", "onum";
+  -moz-font-feature-settings: "liga", "onum";
   font-feature-settings: "liga", "onum";
-  font-size: 17px; }
+  font-size: -webkit-calc(1vmax * 2.1);
+  font-size: calc(1vmax * 2.1);
+}
 
 body {
-  padding: 12vw 15vw;
+  padding: 1vw 15vw 12vw 15vw;
   background: #888 url(../img/amalia.jpg) center center;
-  color: #ff6633;
-  font-family: "eskapade";
+  color: #33FFC2;
+  font-family: "Schwabacher Grotesk";
   font-size: -webkit-calc(1vmax * 2.1);
   font-size: calc(1vmax * 2.1);
   line-height: 1.3;
-  background-size: 32%;
-  background-repeat: no-repeat; }
+  background-size: 41%;
+  background-repeat: no-repeat;
+  overflow-x: hidden;
+}
 
 p {
   position: relative;
-  margin: 16em 0;
+  margin: 13em 0;
   text-align: right;
-  color: #f1f1f1; }
+  color: #f1f1f1;
+  font-size: 1.4em;
+  line-height: 1.19em;
+  font-style: italic;
+}
+
+p:nth-child(even) {
+  -webkit-transform: skewY(0.53deg);
+  -ms-transform: skewY(0.53deg);
+  transform: skewY(0.53deg);
+}
+
+p:nth-child(odd) {
+  -webkit-transform: skewY(-0.4deg);
+  -ms-transform: skewY(-0.4deg);
+  transform: skewY(-0.4deg);
+}
 
 .kapitel {
   text-align: center;
   font-family: "eskapade-fraktur";
-  font-size: 2.8em;
-  font-size: 12em;
+  font-size: 15em;
   line-height: .82em;
   font-weight: 900;
   display: block;
+  -webkit-transform: rotate(-9deg);
+  -ms-transform: rotate(-9deg);
   transform: rotate(-9deg);
   font-style: italic;
   margin: 6rem auto 10rem;
-  letter-spacing: -0.01em; }
+  letter-spacing: -0.01em;
+}
 
 .context {
   display: block;
   position: absolute;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  right: 0;
+  -ms-transform: translate(-50%, -50%);
   z-index: 1;
   font-style: italic;
   color: red;
-  font-size: 1.15em;
+  font-size: 24rem;
   font-weight: bold;
-  line-height: 1; }
+  line-height: 1;
+  width: 13.1em;
+  text-align: right;
+  color: tan;
+  color: #888;
+  text-shadow: 2px -1px 0 blue;
+  top: .495em;
+  right: -1em;
+  z-index: -1;
+  -webkit-transition: all ease-out 1.6s;
+  transition: all ease-out 1.6s;
+}
+
+.context.context-2 {
+  right: 4em;
+}
+
+.maus-oben.maus-links .context {
+  text-shadow: .5px -2px 0 blue;
+}
+
+.maus-oben.maus-rechts .context {
+  text-shadow: -2px -1px 0 blue;
+}
+
+.maus-unten.maus-links .context {
+  text-shadow: .5px 2px 0 blue;
+}
+
+.maus-unten.maus-rechts .context {
+  text-shadow: -2px .5px 0 blue;
+}
 
 .name {
   position: relative;
   display: inline-block;
-  width: .81em;
-  margin-right: .215em;
-  margin-left: -1.05em;
+  margin-right: .035em;
+  margin-left: -1em;
   margin-top: -1px;
-  font-size: 10.0em;
+  font-size: 10.0rem;
   font-weight: bold;
-  line-height: 0.5;
+  line-height: 0.79;
   text-align: center;
-  color: #ff6633;
-  background: url(../img/IMG_0826.JPG) no-repeat center center;
+  color: #FF4533;
   background-size: cover;
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
-  background-attachment: fixed; }
+  z-index: -1;
+  font-style: normal;
+  margin-bottom: -.3em;
+}
 
 .karl .name {
-  font-family: "fairy-tale-jf"; }
+  font-family: "fairy-tale-jf";
+}
 
 .franz .name {
-  font-family: "alexander-quill"; }
+  font-family: "alexander-quill";
+  letter-spacing: -.035em;
+}
 
 .amalia .name {
-  font-family: "ltc-goudy-ornate"; }
+  font-family: "ltc-goudy-ornate";
+}
 
 .graf .name {
-  font-family: "eskapade-fraktur"; }
+  font-family: "eskapade-fraktur";
+}
 
 .diener .name {
-  font-family: "elektrix"; }
+  font-family: "elektrix";
+}
 
 .raeuber .name {
-  font-family: "taurunum-ferrum-iron"; }
+  font-family: "Nova Mono";
+}
 
 .geistlicher .name {
-  font-family: Helvetica; }
+  font-family: Helvetica;
+}
 
 .amalia-bild-div {
-  position: relative; }
+  position: relative;
+}
+
+.name-viele {
+  line-height: .625em;
+  text-align: center;
+  font-size: 8rem;
+  word-wrap: break-word;
+  display: block;
+  width: 102vw;
+}
 
 .bild-amalia {
   position: absolute;
   top: 50%;
   left: 60%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   width: 600px;
   height: 600px;
   background: url(img/amalia.jpg) no-repeat center center;
   background-size: cover;
-  background-blend-mode: lighten; }
+  background-blend-mode: lighten;
+}
 
 .spasti {
   position: fixed;
@@ -117,15 +201,23 @@ p {
   left: 0;
   z-index: 1;
   font-size: 25vmax;
-  color: #888;
+  color: green;
   line-height: 1;
   top: .18em;
   font-family: "taurunum-ferrum-iron";
-  /* letter-spacing: -.03em; */
   font-weight: bold;
-  mix-blend-mode: multiply;
-  /* background: green; */
   height: 100%;
-  display: none; }
+}
+
+.memento {
+  font-size: 2.5em;
+  text-align: right;
+  line-height: .78em;
+  opacity: 1;
+  color: antiquewhite;
+  letter-spacing: -.03em;
+  top: -.6em;
+  right: -.5em;
+}
 
 /*# sourceMappingURL=main.css.map */
