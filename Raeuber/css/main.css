@@ -48,18 +48,6 @@ p {
   font-style: italic;
 }
 
-p:nth-child(even) {
-  -webkit-transform: skewY(0.53deg);
-  -ms-transform: skewY(0.53deg);
-  transform: skewY(0.53deg);
-}
-
-p:nth-child(odd) {
-  -webkit-transform: skewY(-0.4deg);
-  -ms-transform: skewY(-0.4deg);
-  transform: skewY(-0.4deg);
-}
-
 .kapitel {
   text-align: center;
   font-family: "eskapade-fraktur";
@@ -195,10 +183,57 @@ p:nth-child(odd) {
 }
 
 .memento {
-  display: block;
+  font-size: 2.5em;
+  text-align: right;
+  line-height: .78em;
+  opacity: 1;
+  letter-spacing: -.03em;
+  top: -.6em;
+  right: -.5em;
+  font-family: "ProgressiveText";
+  font-style: normal;
+  text-transform: capitalize;
   position: fixed;
-  top: 10px;
-  left: 10px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  background-color: #888;
+  text-align: center;
+  font-size: 10vmax;
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  -webkit-transform: skewY(0);
+  -ms-transform: skewY(0);
+  transform: skewY(0);
+}
+
+.memento-text {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  font-size: 22vmax;
+  width: 100%;
+  color: red;
+}
+
+.memento-bild {
+  position: absolute;
+  top: 49.7%;
+  left: 35%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  z-index: 4;
+  mix-blend-mode: color-burn;
 }
 
 .spot {
