@@ -1,5 +1,24 @@
 document.addEventListener("DOMContentLoaded", function() {
   document.querySelector(".tilt").addEventListener("mousemove", tiltQuestion)
+
+  window.addEventListener("scroll", daCapoListener);
+
+  function daCapoListener() {
+  function elementScrolled(elem) {
+    var docViewTop = $(window).scrollTop() - 400;
+    var docViewBottom = docViewTop + $(window).height() - 100;
+    var elemTop = $(elem).offset().top;
+    return ((elemTop <= docViewBottom) && (elemTop >= docViewTop));
+    }
+
+    if(elementScrolled('.trigger-dacapo')) {
+      $('.capo').addClass('visible');
+      setTimeout(function () {
+        window.removeEventListener("scroll", daCapoListener);
+        $('.capo').removeClass('visible');
+      }, 800);
+    }
+  };
 });
 
 tiltQuestion = function() {

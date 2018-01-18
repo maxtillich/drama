@@ -27,7 +27,7 @@ module.exports = function(grunt) {
     uglify: {
       minifyjs: {
         files: {
-          'js/main.min.js': ['js/main.js']
+          'js/main.min.js': ['js/jquery_3.1.0.min.js','js/main.js']
         }
       }
     },

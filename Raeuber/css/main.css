@@ -182,7 +182,7 @@ p {
   height: 100%;
 }
 
-.memento {
+.latein {
   font-size: 2.5em;
   text-align: right;
   line-height: .78em;
@@ -211,6 +211,18 @@ p {
   transform: skewY(0);
 }
 
+.latein.memento {
+  display: none;
+}
+
+.latein.capo {
+  display: none;
+}
+
+.latein.visible {
+  display: block;
+}
+
 .memento-text {
   display: block;
   position: absolute;
@@ -222,7 +234,7 @@ p {
   z-index: 3;
   font-size: 22vmax;
   width: 100%;
-  color: red;
+  color: black;
 }
 
 .memento-bild {
