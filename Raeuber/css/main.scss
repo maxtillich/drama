@@ -227,7 +227,7 @@ p {
   height: 100%;
 }
 
-.memento {
+.latein {
   font-size: 2.5em;
   text-align: right;
   line-height: .78em;
@@ -255,6 +255,18 @@ p {
   margin: 0;
   padding: 0;
   transform: skewY(0);
+
+  &.memento {
+    display: none;
+  }
+
+  &.capo {
+    display: none;
+  }
+
+  &.visible {
+    display: block;
+  }
 }
 
 .memento-text {
@@ -268,7 +280,7 @@ p {
   z-index: 3;
   font-size: 22vmax;
   width: 100%;
-  color: red;
+  color: black;
 }
 
 .memento-bild {
@@ -283,11 +295,12 @@ p {
 .spot {
   position: fixed;
   z-index: 2;
-  width: 10vw;
-  height: 10vw;
-  background: yellow;
+  width: 9vw;
+  height: 9vw;
+  // background: yellow;
   overflow: visible;
   text-align: center;
+  text-indent: -9999px;
 
   img {
     border: 0;
@@ -300,6 +313,8 @@ p {
 .spot-1 {
   top: 8vh;
   left: 6.5vw;
+  background: url(../img/haende.png) no-repeat center center;
+  background-size: contain;
 
 }
 
@@ -309,7 +324,26 @@ p {
 }
 
 .spot-3 {
+  width: 11vw;
+  height: 11vw;
   top: auto;
-  bottom: 8vh;
-  right: 6.5vw;
+  bottom: 6vh;
+  right: 2vw;
+  background: url(../img/kaefer.png) no-repeat right center;
+  background-size: contain;
+}
+
+.lied {
+  text-align: center;
+  font-size: 1.8em;
+  line-height: 1.5;
+  font-family: "eskapade";
+  //transform: translateX(10%);
+}
+
+.ornament {
+  display: block !important;
+  font-family: "beloved-ornaments" !important;
+  font-style: normal !important;
+  font-size: 2.3em;
 }
