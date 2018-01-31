@@ -1,0 +1,304 @@
+@import url("https://use.typekit.net/dcd0bmy.css");
+
+@import url("https://fonts.googleapis.com/css?family=Astloch:400,700");
+
+@import url("https://fonts.googleapis.com/css?family=Nova+Mono");
+
+* {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  cursor: url("../img/cursor/arm.png"),default;
+}
+
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-feature-settings: "liga", "onum";
+  -moz-font-feature-settings: "liga", "onum";
+  font-feature-settings: "liga", "onum";
+  font-size: -webkit-calc(1vmax * 2.1);
+  font-size: calc(1vmax * 2.1);
+}
+
+body {
+  padding: 1vw 15vw 12vw 15vw;
+  color: #33FFC2;
+  font-family: "Schwabacher Grotesk";
+  font-size: -webkit-calc(1vmax * 2.1);
+  font-size: calc(1vmax * 2.1);
+  line-height: 1.3;
+  overflow-x: hidden;
+  background-color: #888;
+  background-image: url(../img/galgen.png);
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: auto 93.6vh;
+}
+
+p {
+  position: relative;
+  margin: 13em 0;
+  text-align: right;
+  color: #f1f1f1;
+  font-size: 1.4em;
+  line-height: 1.19em;
+  font-style: italic;
+}
+
+.kapitel {
+  text-align: center;
+  font-family: "eskapade-fraktur";
+  font-size: 14.25em;
+  line-height: .82em;
+  font-weight: 900;
+  display: block;
+  -webkit-transform: rotate(-9deg);
+  -ms-transform: rotate(-9deg);
+  transform: rotate(-9deg);
+  font-style: italic;
+  margin: 6rem auto 10rem;
+  letter-spacing: -0.01em;
+}
+
+.context {
+  display: block;
+  position: absolute;
+  right: 0;
+  -ms-transform: translate(-50%, -50%);
+  z-index: 1;
+  font-style: italic;
+  color: red;
+  font-family: "Schwabacher Grotesk";
+  font-size: 24rem;
+  font-weight: bold;
+  line-height: 1;
+  width: 13.1em;
+  text-align: right;
+  color: tan;
+  color: #888;
+  text-shadow: 2px -1px 0 blue;
+  top: .522em;
+  right: -1em;
+  z-index: -1;
+  -webkit-transition: all ease-out 1.6s;
+  transition: all ease-out 1.6s;
+}
+
+.context.context-2 {
+  right: 4em;
+}
+
+.maus-oben.maus-links .context {
+  text-shadow: .5px -2px 0 blue;
+}
+
+.maus-oben.maus-rechts .context {
+  text-shadow: -2px -1px 0 blue;
+}
+
+.maus-unten.maus-links .context {
+  text-shadow: .5px 2px 0 blue;
+}
+
+.maus-unten.maus-rechts .context {
+  text-shadow: -2px .5px 0 blue;
+}
+
+.name {
+  position: relative;
+  display: inline-block;
+  margin-right: .035em;
+  margin-left: -1em;
+  margin-top: -1px;
+  font-size: 10.0rem;
+  font-weight: bold;
+  line-height: 0.79;
+  text-align: center;
+  color: #FF4533;
+  background-size: cover;
+  z-index: -1;
+  font-style: normal;
+  margin-bottom: -.3em;
+}
+
+.karl .name {
+  font-family: "fairy-tale-jf";
+}
+
+.franz .name {
+  font-family: "alexander-quill";
+  letter-spacing: -.035em;
+}
+
+.amalia .name {
+  font-family: "ltc-goudy-ornate";
+}
+
+.graf .name {
+  font-family: "eskapade-fraktur";
+}
+
+.diener .name {
+  font-family: "elektrix";
+}
+
+.raeuber .name {
+  font-family: "Nova Mono";
+}
+
+.geistlicher .name {
+  font-family: Helvetica;
+}
+
+.amalia-bild-div {
+  position: relative;
+}
+
+.name-viele {
+  line-height: .625em;
+  text-align: center;
+  font-size: 8rem;
+  word-wrap: break-word;
+  display: block;
+  width: 102vw;
+}
+
+.blend-test {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  font-size: 25vmax;
+  color: green;
+  line-height: 1;
+  top: .18em;
+  font-family: "taurunum-ferrum-iron";
+  font-weight: bold;
+  height: 100%;
+}
+
+.latein {
+  font-size: 2.5em;
+  text-align: right;
+  line-height: .78em;
+  opacity: 1;
+  letter-spacing: -.03em;
+  top: -.6em;
+  right: -.5em;
+  font-family: "ProgressiveText";
+  font-style: normal;
+  text-transform: capitalize;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  background-color: #888;
+  text-align: center;
+  font-size: 10vmax;
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  -webkit-transform: skewY(0);
+  -ms-transform: skewY(0);
+  transform: skewY(0);
+}
+
+.latein.memento {
+  display: none;
+}
+
+.latein.capo {
+  display: none;
+}
+
+.latein.visible {
+  display: block;
+}
+
+.memento-text {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  font-size: 22vmax;
+  width: 100%;
+  color: black;
+}
+
+.memento-bild {
+  position: absolute;
+  top: 49.7%;
+  left: 35%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  z-index: 4;
+  mix-blend-mode: color-burn;
+}
+
+.spot {
+  position: fixed;
+  z-index: 2;
+  width: 9vw;
+  height: 9vw;
+  overflow: visible;
+  text-align: center;
+  text-indent: -9999px;
+}
+
+.spot img {
+  border: 0;
+  display: inline-block;
+  margin: 0;
+  width: 100%;
+}
+
+.spot-1 {
+  top: 8vh;
+  left: 6.5vw;
+  background: url(../img/haende.png) no-repeat center center;
+  background-size: contain;
+}
+
+.spot-2 {
+  top: 8vh;
+  right: 6.5vw;
+}
+
+.spot-3 {
+  width: 11vw;
+  height: 11vw;
+  top: auto;
+  bottom: 6vh;
+  right: 2vw;
+  background: url(../img/kaefer.png) no-repeat right center;
+  background-size: contain;
+}
+
+.lied {
+  text-align: center;
+  font-size: 1.8em;
+  line-height: 1.5;
+  font-family: "eskapade";
+}
+
+.ornament {
+  display: block !important;
+  font-family: "beloved-ornaments" !important;
+  font-style: normal !important;
+  font-size: 2.3em;
+}
+
+/*# sourceMappingURL=main.css.map */
