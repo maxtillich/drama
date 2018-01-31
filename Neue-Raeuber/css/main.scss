@@ -1,7 +1,13 @@
+$white: #fff;
+$line-height: 1.05rem;
+
 @import url("https://use.typekit.net/dcd0bmy.css");
 @import url('https://fonts.googleapis.com/css?family=Astloch:400,700');
 @import url('https://fonts.googleapis.com/css?family=Nova+Mono');
 
+::-webkit-scrollbar {
+  display: none;
+}
 
 * {
   -webkit-box-sizing: border-box;
@@ -21,329 +27,135 @@ html {
 }
 
 body {
-  padding: 1vw 15vw 12vw 15vw;
-  //background: #888 url(../img/amalia.jpg) center center;
-  //color: #ff6633;
-  color: #33FFC2;
+  margin: 0;
+  padding: 0;
+  background: hsl(356, 81%, 57%);
+  color: #000;
   font-family: "Schwabacher Grotesk";
   font-size: -webkit-calc(1vmax * 2.1);
   font-size: calc(1vmax * 2.1);
-  line-height: 1.3;
-  //background-size: 41%;
-  //background-repeat: no-repeat;
+  line-height: $line-height;
   overflow-x: hidden;
-  // background: #888 url(../img/galgen.png) no-repeact center center;
-  // background-attachment: fixed;
-  background-color: #888;
-  background-image: url(../img/galgen.png);
-  background-repeat: no-repeat;
-  background-position: center bottom;
-  // background-attachment: fixed;
-  background-size: auto 93.6vh;
 }
 
-p {
+.scrolling-container {
   position: relative;
-  margin: 13em 0;
-  text-align: right;
-  color: #f1f1f1;
-  font-size: 1.4em;
-  line-height: 1.19em;
-  font-style: italic;
-
-  // &:nth-child(even) {
-  //   transform: skewY(.53deg);
-  // }
-  //
-  // &:nth-child(odd) {
-  //   transform: skewY(-.4deg);
-  // }
-}
-
-.kapitel {
-  text-align: center;
-  font-family: "eskapade-fraktur";
-  font-size: 14.25em;
-  line-height: .82em;
-  font-weight: 900;
-  //text-shadow: 3px 0 0 #fff;
-  display: block;
-  transform: rotate(-9deg);
-  font-style: italic;
-  margin: 6rem auto 10rem;
-  letter-spacing: -0.01em;
-}
-
-.context {
-  display: block;
-  position: absolute;
-  right: 0;
-  -ms-transform: translate(-50%, -50%);
-  z-index: 1;
-  font-style: italic;
-  color: red;
-  font-family: "Schwabacher Grotesk";
-  font-size: 24rem;
-  font-weight: bold;
-  line-height: 1;
-  width: 13.1em;
-  text-align: right;
-  color: tan;
-  color: #888;
-  text-shadow: 2px -1px 0 blue;
-  top: .522em;
-  //.495em
-  right: -1em;
   z-index: -1;
-  transition: all ease-out 1.6s;
-
-  &.context-2 {
-    right: 4em;
-  }
+  width: 100%;
+  height: 100000px;
 }
 
-.maus-oben.maus-links .context {
-  text-shadow: .5px -2px 0 blue;
-}
-.maus-oben.maus-rechts .context {
-  text-shadow: -2px -1px 0 blue;
-}
-
-.maus-unten.maus-links .context {
-  text-shadow: .5px 2px 0 blue;
-}
-.maus-unten.maus-rechts .context {
-  text-shadow: -2px .5px 0 blue;
-}
-
-// .maus-links .context {
-//   text-shadow: 2px 0px 0 blue;
-// }
-//
-// .maus-rechts .context {
-//   text-shadow: -2px 0px 0 blue;
-// }
-
-.name {
-  position: relative;
-  display: inline-block;
-  /* width: .81em; */
-  margin-right: .035em;
-  margin-left: -1em;
-  margin-top: -1px;
-  font-size: 10.0rem;
-  font-weight: bold;
-  line-height: 0.79;
-  text-align: center;
-  color: #FF4533;
-  /* background: url(../img/IMG_0826.JPG) no-repeat center center; */
-  background-size: cover;
-  /* -webkit-text-fill-color: transparent; */
-  /* -webkit-background-clip: text; */
-  /* background-attachment: fixed; */
-  z-index: -1;
-  font-style: normal;
-  margin-bottom: -.3em;
-}
-
-// Guter Sohn
-.karl .name {
-  font-family: "fairy-tale-jf";
-}
-
-// Böser Sohn
-.franz .name {
-  font-family: "alexander-quill";
-  letter-spacing: -.035em;
-}
-
-// Geliebte
-.amalia .name {
-  font-family: "ltc-goudy-ornate";
-}
-
-// Alter Graf
-.graf .name {
-  font-family: "eskapade-fraktur";
-}
-
-// Diener
-.diener .name {
-  font-family: "elektrix";
-}
-
-// Räuber
-.raeuber .name {
-  //font-family: "taurunum-ferrum-iron";
-  font-family: "Nova Mono";
-}
-
-// Geistlicher
-.geistlicher .name {
-  font-family: Helvetica;
-}
-
-.amalia-bild-div {
-  position: relative;
-}
-
-.name-viele {
-  line-height: .625em;
-  text-align: center;
-  font-size: 8rem;
-  word-wrap: break-word;
-  display: block;
-  width: 102vw;
-}
-
-// .bild-amalia {
-//   position: absolute;
-//   top: 50%;
-//   left: 60%;
-//   transform: translate(-50%,-50%);
-//   width: 600px;
-//   height: 600px;
-//   background: url(img/amalia.jpg) no-repeat center center;
-//   background-size: cover;
-//   background-blend-mode: lighten;
-// }
-
-.blend-test {
+.columns {
   position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: 1;
-  font-size: 25vmax;
-  color: green;
+  display: flex;
+  justify-content: space-between;
+}
+
+.column {
+  position: relative;
+  width: 22%;
+}
+
+.name {
+  position: absolute;
+  left: .5vw;
+  display: inline-block;
+  transform: rotate(-90deg);
+  color: hsl(356, 64%, 46%);
+  font-size: 1.76rem;
   line-height: 1;
-  top: .18em;
-  font-family: "taurunum-ferrum-iron";
-  /* letter-spacing: -.03em; */
-  font-weight: bold;
-  // mix-blend-mode: multiply;
-  /* background: green; */
-  height: 100%;
+  font-family: 'eskapade-fraktur';
+
+  &.active {
+    color: hsl(243, 64%, 58%);
+  }
 }
 
-.latein {
-  font-size: 2.5em;
+.alternative .name {
+  position: absolute;
+  left: .5vw;
+  display: inline-block;
+  -webkit-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  transform: rotate(-90deg) translateX(-50%);
+  color: #c02a34;
+  font-size: 5rem;
+  line-height: 1;
+  font-family: 'eskapade-fraktur';
+  top: 50% !important;
+  transform-origin: left top !important;
+  text-align: left !important;
+  font-weight: 400;
+  letter-spacing: .4px;
+}
+
+.name-top {
+  top: 2.1vh;
+  transform-origin: left top;
   text-align: right;
-  line-height: .78em;
-  opacity: 1;
-  letter-spacing: -.03em;
-  top: -.6em;
-  right: -.5em;
-  font-family: "ProgressiveText";
-  font-style: normal;
-  text-transform: capitalize;
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  //left: -15.7vw;
-  z-index: 2;
-  //background: #888 url(../img/kopf.png) no-repeat center center;
-  //background-size: 40%;
-  background-color: #888;
-  text-align: center;
-  font-size: 10vmax;
-  display: block;
-  width: 100vw;
-  height: 100vh;
-  margin: 0;
-  padding: 0;
-  transform: skewY(0);
-
-  &.memento {
-    display: none;
-  }
-
-  &.capo {
-    display: none;
-  }
-
-  &.visible {
-    display: block;
-  }
+  transform: rotate(-90deg) translateX(-100%);
 }
 
-.memento-text {
-  display: block;
+.name-bottom {
+  bottom: -3.1vh;
+  transform-origin: left top;
+  text-align: left;
+}
+
+.column p {
   position: absolute;
-  top: 50%;
+  color: $white;
+  font-size: .7rem;
+  padding: 0 0 0 1.35rem;
+}
+
+.c-amalia-1a {
+  bottom: calc(#{$line-height} * 6);
+}
+
+.c-amalia-1b {
+  top: calc(#{$line-height} * 2);
+}
+
+// .c-daniel {
+//   position: fixed;
+//   z-index: 999;
+//   top: 50%;
+//   left: 50%;
+//   transform: translate(-50%,-50%);
+//   background: $white;
+//
+//   &:before {
+//
+//   }
+// }
+
+.buehnenanweisungen aside {
+  position: absolute;
+  top: 1.8vh;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  z-index: 3;
-  font-size: 22vmax;
   width: 100%;
-  color: black;
+  padding: 0 0 0 1.35rem;
+  transform: translateX(-50%);
+  color: rgba(255,255,255,.6);
+  text-align: left;
+  font-size: .7rem;
+  opacity: 0;
+  letter-spacing: .012em;
+  font-family: 'eskapade-fraktur';
+  font-style: italic;
+
+  // &:first-child {
+  //   opacity: 1;
+  // }
 }
 
-.memento-bild {
-  position: absolute;
-  top: 49.7%;
-  left: 35%;
-  transform: translate(-50%, -50%);
-  z-index: 4;
-  mix-blend-mode: color-burn;
-}
-
-.spot {
-  position: fixed;
-  z-index: 2;
-  width: 9vw;
-  height: 9vw;
-  // background: yellow;
-  overflow: visible;
-  text-align: center;
-  text-indent: -9999px;
-
-  img {
-    border: 0;
-    display: inline-block;
-    margin: 0;
-    width: 100%;
-  }
-}
-
-.spot-1 {
-  top: 8vh;
-  left: 6.5vw;
-  background: url(../img/haende.png) no-repeat center center;
-  background-size: contain;
-
-}
-
-.spot-2 {
-  top: 8vh;
-  right: 6.5vw;
-}
-
-.spot-3 {
-  width: 11vw;
-  height: 11vw;
+.column-2 .buehnenanweisungen aside,
+.column-4 .buehnenanweisungen aside {
   top: auto;
-  bottom: 6vh;
-  right: 2vw;
-  background: url(../img/kaefer.png) no-repeat right center;
-  background-size: contain;
-}
-
-.lied {
-  text-align: center;
-  font-size: 1.8em;
-  line-height: 1.5;
-  font-family: "eskapade";
-  //transform: translateX(10%);
-}
-
-.ornament {
-  display: block !important;
-  font-family: "beloved-ornaments" !important;
-  font-style: normal !important;
-  font-size: 2.3em;
+  bottom: 2vh;
 }
