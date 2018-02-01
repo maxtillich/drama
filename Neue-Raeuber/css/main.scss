@@ -74,6 +74,29 @@ body {
   overflow-x: hidden;
 }
 
+.bg_Kapitel {
+  background-image: url(img/HandKopf.png);
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: auto 93.6vh;
+}
+
+.kapitelH {
+  text-align: center;
+  font-family: "eskapade-fraktur";
+  font-size: 14.25em;
+  line-height: .82em;
+  font-weight: 900;
+  display: block;
+  -webkit-transform: rotate(-9deg);
+  -ms-transform: rotate(-9deg);
+  transform: rotate(-9deg);
+  font-style: italic;
+  margin: 6rem auto 10rem;
+  letter-spacing: -0.01em;
+  color: hsl(243, 64%, 58%);
+}
+
 .scrolling-container {
   position: relative;
   z-index: -1;
@@ -324,6 +347,13 @@ p {
   position: relative;
   text-align: left;
   @include x-large();
+}
+
+.c-moor-8 span:nth-child(3) {
+  display: inline-block;
+  position: relative;
+  text-align: left;
+  padding-left: 10px;
 }
 
 .c-amalia-4 {
