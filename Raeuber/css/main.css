@@ -48,7 +48,14 @@ p {
   font-style: italic;
 }
 
-.kapitel {
+.bg_Kapitel {
+  background-image: url(../img/HandKopf.png);
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: auto 93.6vh;
+}
+
+.kapitelH {
   text-align: center;
   font-family: "eskapade-fraktur";
   font-size: 14.25em;
