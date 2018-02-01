@@ -1,5 +1,40 @@
+$backgroundColor: hsl(356, 81%, 57%);
 $white: #fff;
-$line-height: 1.05rem;
+$line-height-root: 1.1rem;
+
+$space: 1.05em;
+
+$small: .52rem;
+$normal: .8rem;
+$large: 1.55rem;
+$x-large: 1.9rem;
+$xx-large: 5rem;
+
+@mixin small() {
+  font-size: $small;
+  letter-spacing: .05em;
+}
+
+@mixin normal() {
+  font-size: $normal;
+  line-height: $line-height-root;
+}
+
+@mixin large() {
+  font-size: $large;
+  line-height: 1.1em;
+}
+
+
+@mixin x-large() {
+  font-size: $x-large;
+  line-height: 1.1em;
+}
+
+@mixin xx-large() {
+  font-size: $xx-large;
+  line-height: 1.1em;
+}
 
 @import url("https://use.typekit.net/dcd0bmy.css");
 @import url('https://fonts.googleapis.com/css?family=Astloch:400,700');
@@ -29,12 +64,12 @@ html {
 body {
   margin: 0;
   padding: 0;
-  background: hsl(356, 81%, 57%);
+  background: $backgroundColor;
   color: #000;
   font-family: "Schwabacher Grotesk";
   font-size: -webkit-calc(1vmax * 2.1);
   font-size: calc(1vmax * 2.1);
-  line-height: $line-height;
+  line-height: $line-height-root;
   overflow-x: hidden;
 }
 
@@ -57,7 +92,7 @@ body {
 
 .column {
   position: relative;
-  width: 22%;
+  width: 24%;
 }
 
 .name {
@@ -66,31 +101,53 @@ body {
   display: inline-block;
   transform: rotate(-90deg);
   color: hsl(356, 64%, 46%);
-  font-size: 1.76rem;
+  font-size: 1.7rem;
   line-height: 1;
-  font-family: 'eskapade-fraktur';
+  font-family: "eskapade-fraktur";
 
   &.active {
     color: hsl(243, 64%, 58%);
   }
 }
 
-.alternative .name {
-  position: absolute;
-  left: .5vw;
+// .alternative .name {
+//   position: absolute;
+//   left: .5vw;
+//   display: inline-block;
+//   -webkit-transform: rotate(-90deg);
+//   -ms-transform: rotate(-90deg);
+//   transform: rotate(-90deg) translateX(-50%);
+//   color: #c02a34;
+//   font-size: 5rem;
+//   line-height: 1;
+//   font-family: 'eskapade-fraktur';
+//   top: 50% !important;
+//   transform-origin: left top !important;
+//   text-align: left !important;
+//   font-weight: 400;
+//   letter-spacing: .4px;
+// }
+
+.name-name {
+  transform: translateY(100%) scale(.96,.96);
   display: inline-block;
-  -webkit-transform: rotate(-90deg);
-  -ms-transform: rotate(-90deg);
-  transform: rotate(-90deg) translateX(-50%);
-  color: #c02a34;
-  font-size: 5rem;
-  line-height: 1;
-  font-family: 'eskapade-fraktur';
-  top: 50% !important;
-  transform-origin: left top !important;
-  text-align: left !important;
-  font-weight: 400;
-  letter-spacing: .4px;
+  opacity: .5;
+  transition: transform ease-out .5s, opacity ease-out .5s;
+}
+
+.name.visible .name-name {
+  transform: translateY(0%) scale(1,1);
+  opacity: 1;
+}
+
+.name-overlay {
+  display: inline-block;
+  position: absolute;
+  background: $backgroundColor;
+  color: rgba(255,255,255,0);
+  z-index: 1;
+  right: 0;
+  top: 99%;
 }
 
 .name-top {
@@ -106,56 +163,153 @@ body {
   text-align: left;
 }
 
-.column p {
-  position: absolute;
-  color: $white;
-  font-size: .7rem;
-  padding: 0 0 0 1.35rem;
-}
-
-.c-amalia-1a {
-  bottom: calc(#{$line-height} * 6);
-}
-
-.c-amalia-1b {
-  top: calc(#{$line-height} * 2);
-}
-
-// .c-daniel {
-//   position: fixed;
-//   z-index: 999;
-//   top: 50%;
-//   left: 50%;
-//   transform: translate(-50%,-50%);
-//   background: $white;
-//
-//   &:before {
-//
-//   }
-// }
-
 .buehnenanweisungen aside {
   position: absolute;
   top: 1.8vh;
   left: 50%;
   width: 100%;
-  padding: 0 0 0 1.35rem;
+  padding: 0 0 0 2.27rem;
   transform: translateX(-50%);
   color: rgba(255,255,255,.6);
-  text-align: left;
+  text-align: right;
   font-size: .7rem;
   opacity: 0;
   letter-spacing: .012em;
   font-family: 'eskapade-fraktur';
   font-style: italic;
-
-  // &:first-child {
-  //   opacity: 1;
-  // }
 }
 
 .column-2 .buehnenanweisungen aside,
 .column-4 .buehnenanweisungen aside {
   top: auto;
   bottom: 2vh;
+}
+
+figure {
+  position: absolute;
+  z-index: -1;
+  background: $backgroundColor;
+  background-blend-mode: screen;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  width: 6vw;
+  height: 6vw;
+}
+
+p {
+  position: absolute;
+  color: $white;
+  font-size: $normal;
+  padding: 0 0 0 2.27rem;
+}
+
+.c-amalia-1a {
+  bottom: calc(#{$line-height-root} * 6);
+  font-size: $large;
+  // line-height: 1.3em;
+
+  span {
+    display: inline-block;
+    @include small();
+    margin-top: $line-height-root;
+  }
+}
+
+.c-amalia-1b {
+  top: calc(#{$line-height-root} * 3);
+}
+
+.c-moor-1 {
+  top: calc(#{$line-height-root} * 2);
+  @include small();
+}
+
+.c-moor-1b {
+  top: calc(#{$line-height-root} * 5);
+  font-size: $x-large;
+}
+
+.c-moor-1c {
+  top: calc(#{$line-height-root} * 8);
+  @include xx-large();
+}
+
+.c-amalia-2 {
+  top: calc(#{$line-height-root} * 3);
+  font-size: $large;
+
+  span {
+    display: inline-block;
+    font-size: $small;
+    margin-top: $line-height-root;
+  }
+}
+
+.c-moor-2 {
+  width: 130%;
+  top: calc(#{$line-height-root} * 8);
+  @include x-large();
+
+  span {
+    display: block;
+    @include normal();
+    margin-top: calc(#{$line-height-root} / 2);
+  }
+}
+
+.c-amalia-3a {
+  top: calc(#{$line-height-root} * 3);
+  @include normal();
+}
+
+.c-amalia-3b {
+  top: auto;
+  bottom: calc(#{$line-height-root} * 1);
+  @include xx-large();
+}
+
+.c-moor-3 {
+  width: 140%;
+  top: calc(#{$line-height-root} * 15);
+  @include large();
+}
+
+.c-amalia-4 {
+  top: calc(#{$line-height-root} * 13);
+}
+
+.figure-auge-1 {
+  top: calc(#{$line-height-root} * 2.4);
+  background-image: url(../img/auge1.png);
+  width: 13vw;
+  height: 8vw;
+  left: -6vw;
+}
+
+.c-moor-4a {
+  top: calc(#{$line-height-root} * 1);
+  @include large();
+}
+
+.c-moor-4a1 {
+  width: 100%;
+  top: calc(#{$line-height-root} * 8);
+  @include large();
+  text-align: center;
+}
+
+.c-moor-4b {
+  width: 120%;
+  top: calc(#{$line-height-root} * 14);
+  @include large();
+}
+
+.c-moor-4c {
+  width: 120%;
+  top: auto;
+  top: calc(#{$line-height-root} * 21);
+  @include normal();
+  text-align: center;
+  margin-left: -10%;
 }

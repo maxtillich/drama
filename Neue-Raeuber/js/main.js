@@ -4,5 +4,10 @@ document.addEventListener("DOMContentLoaded", function() {
     smoothScrolling: false
   });
 
+  setTimeout(function () {
+    $('.name').addClass('visible');
+    console.log('yo');
+  }, 900);
+
   console.log('ok')
 });

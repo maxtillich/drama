@@ -35,7 +35,7 @@ body {
   font-family: "Schwabacher Grotesk";
   font-size: -webkit-calc(1vmax * 2.1);
   font-size: calc(1vmax * 2.1);
-  line-height: 1.05rem;
+  line-height: 1.1rem;
   overflow-x: hidden;
 }
 
@@ -64,7 +64,7 @@ body {
 
 .column {
   position: relative;
-  width: 22%;
+  width: 24%;
 }
 
 .name {
@@ -75,33 +75,41 @@ body {
   -ms-transform: rotate(-90deg);
   transform: rotate(-90deg);
   color: #c02a34;
-  font-size: 1.76rem;
+  font-size: 1.7rem;
   line-height: 1;
-  font-family: 'eskapade-fraktur';
+  font-family: "eskapade-fraktur";
 }
 
 .name.active {
   color: #564fd8;
 }
 
-.alternative .name {
-  position: absolute;
-  left: .5vw;
+.name-name {
+  -webkit-transform: translateY(100%) scale(0.96, 0.96);
+  -ms-transform: translateY(100%) scale(0.96, 0.96);
+  transform: translateY(100%) scale(0.96, 0.96);
   display: inline-block;
-  -webkit-transform: rotate(-90deg);
-  -ms-transform: rotate(-90deg);
-  transform: rotate(-90deg) translateX(-50%);
-  color: #c02a34;
-  font-size: 5rem;
-  line-height: 1;
-  font-family: 'eskapade-fraktur';
-  top: 50% !important;
-  -webkit-transform-origin: left top !important;
-  -ms-transform-origin: left top !important;
-  transform-origin: left top !important;
-  text-align: left !important;
-  font-weight: 400;
-  letter-spacing: .4px;
+  opacity: .5;
+  -webkit-transition: -webkit-transform ease-out .5s, opacity ease-out .5s;
+  transition: -ms-transform ease-out .5s, opacity ease-out .5s;
+  transition: transform ease-out .5s, opacity ease-out .5s;
+}
+
+.name.visible .name-name {
+  -webkit-transform: translateY(0%) scale(1, 1);
+  -ms-transform: translateY(0%) scale(1, 1);
+  transform: translateY(0%) scale(1, 1);
+  opacity: 1;
+}
+
+.name-overlay {
+  display: inline-block;
+  position: absolute;
+  background: #ea3944;
+  color: rgba(255,255,255,0);
+  z-index: 1;
+  right: 0;
+  top: 99%;
 }
 
 .name-top {
@@ -123,34 +131,17 @@ body {
   text-align: left;
 }
 
-.column p {
-  position: absolute;
-  color: #fff;
-  font-size: .7rem;
-  padding: 0 0 0 1.35rem;
-}
-
-.c-amalia-1a {
-  bottom: -webkit-calc(1.05rem * 6);
-  bottom: calc(1.05rem * 6);
-}
-
-.c-amalia-1b {
-  top: -webkit-calc(1.05rem * 2);
-  top: calc(1.05rem * 2);
-}
-
 .buehnenanweisungen aside {
   position: absolute;
   top: 1.8vh;
   left: 50%;
   width: 100%;
-  padding: 0 0 0 1.35rem;
+  padding: 0 0 0 2.27rem;
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
   transform: translateX(-50%);
   color: rgba(255,255,255,0.6);
-  text-align: left;
+  text-align: right;
   font-size: .7rem;
   opacity: 0;
   letter-spacing: .012em;
@@ -162,6 +153,163 @@ body {
 .column-4 .buehnenanweisungen aside {
   top: auto;
   bottom: 2vh;
+}
+
+figure {
+  position: absolute;
+  z-index: -1;
+  background: #ea3944;
+  background-blend-mode: screen;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  width: 6vw;
+  height: 6vw;
+}
+
+p {
+  position: absolute;
+  color: #fff;
+  font-size: .8rem;
+  padding: 0 0 0 2.27rem;
+}
+
+.c-amalia-1a {
+  bottom: -webkit-calc(1.1rem * 6);
+  bottom: calc(1.1rem * 6);
+  font-size: 1.55rem;
+}
+
+.c-amalia-1a span {
+  display: inline-block;
+  font-size: .52rem;
+  letter-spacing: .05em;
+  margin-top: 1.1rem;
+}
+
+.c-amalia-1b {
+  top: -webkit-calc(1.1rem * 3);
+  top: calc(1.1rem * 3);
+}
+
+.c-moor-1 {
+  top: -webkit-calc(1.1rem * 2);
+  top: calc(1.1rem * 2);
+  font-size: .52rem;
+  letter-spacing: .05em;
+}
+
+.c-moor-1b {
+  top: -webkit-calc(1.1rem * 5);
+  top: calc(1.1rem * 5);
+  font-size: 1.9rem;
+}
+
+.c-moor-1c {
+  top: -webkit-calc(1.1rem * 8);
+  top: calc(1.1rem * 8);
+  font-size: 5rem;
+  line-height: 1.1em;
+}
+
+.c-amalia-2 {
+  top: -webkit-calc(1.1rem * 3);
+  top: calc(1.1rem * 3);
+  font-size: 1.55rem;
+}
+
+.c-amalia-2 span {
+  display: inline-block;
+  font-size: .52rem;
+  margin-top: 1.1rem;
+}
+
+.c-moor-2 {
+  width: 130%;
+  top: -webkit-calc(1.1rem * 8);
+  top: calc(1.1rem * 8);
+  font-size: 1.9rem;
+  line-height: 1.1em;
+}
+
+.c-moor-2 span {
+  display: block;
+  font-size: .8rem;
+  line-height: 1.1rem;
+  margin-top: -webkit-calc(1.1rem / 2);
+  margin-top: calc(1.1rem / 2);
+}
+
+.c-amalia-3a {
+  top: -webkit-calc(1.1rem * 3);
+  top: calc(1.1rem * 3);
+  font-size: .8rem;
+  line-height: 1.1rem;
+}
+
+.c-amalia-3b {
+  top: auto;
+  bottom: -webkit-calc(1.1rem * 1);
+  bottom: calc(1.1rem * 1);
+  font-size: 5rem;
+  line-height: 1.1em;
+}
+
+.c-moor-3 {
+  width: 140%;
+  top: -webkit-calc(1.1rem * 15);
+  top: calc(1.1rem * 15);
+  font-size: 1.55rem;
+  line-height: 1.1em;
+}
+
+.c-amalia-4 {
+  top: -webkit-calc(1.1rem * 13);
+  top: calc(1.1rem * 13);
+}
+
+.figure-auge-1 {
+  top: -webkit-calc(1.1rem * 2.4);
+  top: calc(1.1rem * 2.4);
+  background-image: url(../img/auge1.png);
+  width: 13vw;
+  height: 8vw;
+  left: -6vw;
+}
+
+.c-moor-4a {
+  top: -webkit-calc(1.1rem * 1);
+  top: calc(1.1rem * 1);
+  font-size: 1.55rem;
+  line-height: 1.1em;
+}
+
+.c-moor-4a1 {
+  width: 100%;
+  top: -webkit-calc(1.1rem * 8);
+  top: calc(1.1rem * 8);
+  font-size: 1.55rem;
+  line-height: 1.1em;
+  text-align: center;
+}
+
+.c-moor-4b {
+  width: 120%;
+  top: -webkit-calc(1.1rem * 14);
+  top: calc(1.1rem * 14);
+  font-size: 1.55rem;
+  line-height: 1.1em;
+}
+
+.c-moor-4c {
+  width: 120%;
+  top: auto;
+  top: -webkit-calc(1.1rem * 21);
+  top: calc(1.1rem * 21);
+  font-size: .8rem;
+  line-height: 1.1rem;
+  text-align: center;
+  margin-left: -10%;
 }
 
 /*# sourceMappingURL=main.css.map */
