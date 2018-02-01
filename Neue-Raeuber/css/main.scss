@@ -22,18 +22,18 @@ $xx-large: 5rem;
 
 @mixin large() {
   font-size: $large;
-  line-height: 1.1em;
+  line-height: 1.2em;
 }
 
 
 @mixin x-large() {
   font-size: $x-large;
-  line-height: 1.1em;
+  line-height: 1.2em;
 }
 
 @mixin xx-large() {
   font-size: $xx-large;
-  line-height: 1.1em;
+  line-height: 1.2em;
 }
 
 @import url("https://use.typekit.net/dcd0bmy.css");
@@ -110,23 +110,23 @@ body {
   }
 }
 
-// .alternative .name {
-//   position: absolute;
-//   left: .5vw;
-//   display: inline-block;
-//   -webkit-transform: rotate(-90deg);
-//   -ms-transform: rotate(-90deg);
-//   transform: rotate(-90deg) translateX(-50%);
-//   color: #c02a34;
-//   font-size: 5rem;
-//   line-height: 1;
-//   font-family: 'eskapade-fraktur';
-//   top: 50% !important;
-//   transform-origin: left top !important;
-//   text-align: left !important;
-//   font-weight: 400;
-//   letter-spacing: .4px;
-// }
+.alternative .name {
+  position: absolute;
+  left: .5vw;
+  display: inline-block;
+  -webkit-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  transform: rotate(-90deg) translateX(-50%);
+  color: #c02a34;
+  font-size: 5rem;
+  line-height: 1;
+  font-family: 'eskapade-fraktur';
+  top: 50% !important;
+  transform-origin: left top !important;
+  text-align: left !important;
+  font-weight: 400;
+  letter-spacing: .4px;
+}
 
 .name-name {
   transform: translateY(100%) scale(.96,.96);
@@ -201,7 +201,18 @@ p {
   position: absolute;
   color: $white;
   font-size: $normal;
-  padding: 0 0 0 2.27rem;
+  padding: 0 0 0 2.55rem;
+  top: calc(#{$line-height-root} * 3);
+}
+
+.figure-pssht-1 {
+  top: auto;
+  bottom: -1.8vw;
+  background-image: url(../img/pst/PST.png);
+  width: 25vw;
+  height: 22vw;
+  left: 5.6vw;
+  margin: 0;
 }
 
 .c-amalia-1a {
@@ -235,8 +246,18 @@ p {
   @include xx-large();
 }
 
+.figure-pssht-2 {
+  top: auto;
+  bottom: -1.76vw;
+  background-image: url(../img/ohr.png);
+  width: 25vw;
+  height: 30vw;
+  left: 5.6vw;
+  margin: 0;
+}
+
 .c-amalia-2 {
-  top: calc(#{$line-height-root} * 3);
+  top: calc(#{$line-height-root} * 2);
   font-size: $large;
 
   span {
@@ -248,7 +269,7 @@ p {
 
 .c-moor-2 {
   width: 130%;
-  top: calc(#{$line-height-root} * 8);
+  top: calc(#{$line-height-root} * 7);
   @include x-large();
 
   span {
@@ -265,18 +286,22 @@ p {
 
 .c-amalia-3b {
   top: auto;
-  bottom: calc(#{$line-height-root} * 1);
+  bottom: calc(#{$line-height-root} * 1.5);
   @include xx-large();
 }
 
 .c-moor-3 {
   width: 140%;
-  top: calc(#{$line-height-root} * 15);
+  top: calc(#{$line-height-root} * 10);
   @include large();
 }
 
 .c-amalia-4 {
-  top: calc(#{$line-height-root} * 13);
+  top: calc(#{$line-height-root} * 8);
+}
+
+.c-amalia-5 {
+  top: calc(#{$line-height-root} * 8);
 }
 
 .figure-auge-1 {
@@ -292,11 +317,27 @@ p {
   @include large();
 }
 
+.figure-auge-2 {
+  top: calc(#{$line-height-root} * 8.5);
+  background-image: url(../img/auge2.png);
+  width: 10vw;
+  height: 9vw;
+  right: -2vw;
+}
+
 .c-moor-4a1 {
   width: 100%;
   top: calc(#{$line-height-root} * 8);
   @include large();
   text-align: center;
+}
+
+.figure-auge-3 {
+  top: calc(#{$line-height-root} * 13);
+  background-image: url(../img/auge3.png);
+  width: 15vw;
+  height: 13vw;
+  left: -1vw;
 }
 
 .c-moor-4b {
@@ -307,9 +348,67 @@ p {
 
 .c-moor-4c {
   width: 120%;
-  top: auto;
   top: calc(#{$line-height-root} * 21);
   @include normal();
   text-align: center;
   margin-left: -10%;
+}
+
+.c-moor-5a {
+  top: calc(#{$line-height-root} * 1);
+  @include small();
+}
+
+.figure-verzeihung0 {
+  position: fixed;
+  top: auto;
+  bottom: calc(#{$line-height-root} * 1);
+  background-image: url(../img/haende.png);
+  width: 9vw;
+  height: 6.5vw;
+  right: 3vw;
+}
+
+.c-moor-5b {
+  top: calc(#{$line-height-root} * 10);
+
+  span {
+    display: block;
+    font-size: $x-large;
+    margin: .3em 0;
+  }
+}
+
+.figure-verzeihung-1 {
+  top: calc(#{$line-height-root} * 2);
+  background-image: url(../img/verzeihung1.png);
+  width: 25vw;
+  height: 17vw;
+  right: -11vw;
+}
+
+.c-amalia-6a {
+  top: calc(#{$line-height-root} * 2);
+
+  span {
+    @include small;
+  }
+}
+
+.figure-verzeihung-2 {
+  top: auto;
+  bottom: calc(#{$line-height-root} * 3);
+  background-image: url(../img/verzeihung2.png);
+  width: 14vw;
+  height: 13vw;
+  left: 0vw;
+}
+
+.c-amalia-6b {
+  top: auto;
+  bottom: calc(#{$line-height-root} * 2);
+
+  span {
+    @include small;
+  }
 }
