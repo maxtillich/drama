@@ -297,9 +297,20 @@ p {
   @include large();
 }
 
+.figure-faust-1 {
+  top: calc(#{$line-height-root} * 1);
+  right: -10vw;
+  background-image: url(../img/faust.png);
+  width: 23vw;
+  height: 27vw;
+  margin: 0;
+  transform: rotate(12deg);
+}
+
 .c-moor-8 {
   @include small();
   text-align: right;
+  top: 7vw;
 }
 
 .c-moor-8 span:first-child {
