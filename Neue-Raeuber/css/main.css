@@ -162,6 +162,7 @@ p {
     display: inline-block;
     font-size: 0.52rem;
     letter-spacing: .05em;
+    line-height: 1.4em;
     margin-top: 1.1rem; }
 
 .c-amalia-1b {
@@ -170,7 +171,8 @@ p {
 .c-moor-1 {
   top: calc(1.1rem * 2);
   font-size: 0.52rem;
-  letter-spacing: .05em; }
+  letter-spacing: .05em;
+  line-height: 1.4em; }
 
 .c-moor-1b {
   top: calc(1.1rem * 5);
@@ -229,6 +231,7 @@ p {
 .c-moor-8 {
   font-size: 0.52rem;
   letter-spacing: .05em;
+  line-height: 1.4em;
   text-align: right; }
 
 .c-moor-8 span:first-child {
@@ -299,7 +302,8 @@ p {
 .c-moor-5a {
   top: calc(1.1rem * 1);
   font-size: 0.52rem;
-  letter-spacing: .05em; }
+  letter-spacing: .05em;
+  line-height: 1.4em; }
 
 .figure-verzeihung0 {
   position: fixed;
@@ -328,7 +332,8 @@ p {
   top: calc(1.1rem * 2); }
   .c-amalia-6a span {
     font-size: 0.52rem;
-    letter-spacing: .05em; }
+    letter-spacing: .05em;
+    line-height: 1.4em; }
 
 .figure-verzeihung-2 {
   top: auto;
@@ -343,7 +348,8 @@ p {
   bottom: calc(1.1rem * 2); }
   .c-amalia-6b span {
     font-size: 0.52rem;
-    letter-spacing: .05em; }
+    letter-spacing: .05em;
+    line-height: 1.4em; }
 
 .c-amalia-8 {
   font-size: 1.9rem; }
