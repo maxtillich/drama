@@ -246,6 +246,12 @@ p {
   font-size: 1.9rem;
   line-height: 1.2em; }
 
+.c-moor-8 span:nth-child(3) {
+  display: inline-block;
+  position: relative;
+  text-align: left;
+  padding-left: 10px; }
+
 .c-amalia-4 {
   top: calc(1.1rem * 8); }
 

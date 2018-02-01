@@ -315,6 +315,13 @@ p {
   @include x-large();
 }
 
+.c-moor-8 span:nth-child(3) {
+  display: inline-block;
+  position: relative;
+  text-align: left;
+  padding-left: 10px;
+}
+
 .c-amalia-4 {
   top: calc(#{$line-height-root} * 8);
 }
