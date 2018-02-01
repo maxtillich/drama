@@ -494,4 +494,73 @@ p {
   top: 2em;
 }
 
+.c-amalia-9a {
+  font-size: 5rem;
+  line-height: 1.2em;
+}
+
+.c-amalia-9a span {
+  font-size: .8rem;
+  line-height: 1.1rem;
+}
+
+.c-amalia-9c {
+  top: 18vw;
+}
+
+.c-moor-9a {
+  top: auto;
+  bottom: 14vw;
+  font-size: .8rem;
+  line-height: 1.1rem;
+}
+
+.c-moor-9b {
+  top: 7vw;
+  font-size: 1.55rem;
+  line-height: 1.2em;
+}
+
+.c-amalia-10a {
+  top: 2vw;
+}
+
+.c-amalia-10b {
+  top: 17vw;
+  font-size: 1.55rem;
+  line-height: 1.2em;
+}
+
+.c-amalia-12 {
+  top: 22vw;
+  width: 170%;
+  left: 5vw;
+}
+
+.c-amalia-12 span {
+  color: #000;
+}
+
+.figure-klavier-1 {
+  top: 21vh;
+  background-image: url(../img/klavierhand2.png);
+  width: 22vw;
+  height: 8vw;
+  left: -6vw;
+  -webkit-transform: rotate(-6deg);
+  -ms-transform: rotate(-6deg);
+  transform: rotate(-6deg);
+}
+
+.figure-klavier-2 {
+  top: 57vh;
+  background-image: url(../img/klavierhand.png);
+  width: 28vw;
+  height: 13vw;
+  left: -6vw;
+  -webkit-transform: rotate(-6deg);
+  -ms-transform: rotate(-6deg);
+  transform: rotate(-6deg);
+}
+
 /*# sourceMappingURL=main.css.map */

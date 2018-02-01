@@ -449,5 +449,65 @@ p {
 }
 
 .c-amalia-8 span {
-top: 2em;
+  top: 2em;
+}
+
+.c-amalia-9a {
+  @include xx-large;
+
+  span {
+    @include normal;
+  }
+}
+
+.c-amalia-9c {
+  top: 18vw;
+}
+
+.c-moor-9a {
+  top: auto;
+  bottom: 14vw;
+  @include normal;
+}
+
+.c-moor-9b {
+  top: 7vw;
+  @include large;
+}
+
+.c-amalia-10a {
+  top: 2vw;
+}
+
+.c-amalia-10b {
+  top: 17vw;
+  @include large;
+}
+
+.c-amalia-12 {
+  top: 22vw;
+  width: 170%;
+  left: 5vw;
+
+  span {
+    color: #000;
+  }
+}
+
+.figure-klavier-1 {
+  top: 21vh;
+  background-image: url(../img/klavierhand2.png);
+  width: 22vw;
+  height: 8vw;
+  left: -6vw;
+  transform: rotate(-6deg);
+}
+
+.figure-klavier-2 {
+  top: 57vh;
+  background-image: url(../img/klavierhand.png);
+  width: 28vw;
+  height: 13vw;
+  left: -6vw;
+  transform: rotate(-6deg);
 }
