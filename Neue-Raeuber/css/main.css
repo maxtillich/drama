@@ -228,7 +228,20 @@ p {
 
 .c-moor-8 {
   font-size: 0.52rem;
-  letter-spacing: .05em; }
+  letter-spacing: .05em;
+  text-align: right; }
+
+.c-moor-8 span:first-child {
+  display: inline-block;
+  position: relative;
+  top: 5px; }
+
+.c-moor-8 span:nth-child(2) {
+  display: inline-block;
+  position: relative;
+  text-align: left;
+  font-size: 1.9rem;
+  line-height: 1.2em; }
 
 .c-amalia-4 {
   top: calc(1.1rem * 8); }

@@ -298,6 +298,20 @@ p {
 
 .c-moor-8 {
   @include small();
+  text-align: right;
+}
+
+.c-moor-8 span:first-child {
+  display: inline-block;
+  position: relative;
+  top: 5px;
+}
+
+.c-moor-8 span:nth-child(2) {
+  display: inline-block;
+  position: relative;
+  text-align: left;
+  @include x-large();
 }
 
 .c-amalia-4 {
