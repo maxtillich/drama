@@ -296,6 +296,10 @@ p {
   @include large();
 }
 
+.c-moor-8 {
+  @include small();
+}
+
 .c-amalia-4 {
   top: calc(#{$line-height-root} * 8);
 }
@@ -411,4 +415,12 @@ p {
   span {
     @include small;
   }
+}
+
+.c-amalia-8 {
+  font-size: 1.9rem;
+}
+
+.c-amalia-8 span {
+top: 2em;
 }
