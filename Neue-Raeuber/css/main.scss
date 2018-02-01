@@ -298,11 +298,11 @@ p {
 }
 
 .figure-faust-1 {
-  top: calc(#{$line-height-root} * 1);
+  top: calc(#{$line-height-root} * 3);
   right: -10vw;
   background-image: url(../img/faust.png);
-  width: 23vw;
-  height: 27vw;
+  width: 21vw;
+  height: 26vw;
   margin: 0;
   transform: rotate(12deg);
 }
@@ -317,6 +317,7 @@ p {
   display: inline-block;
   position: relative;
   top: 5px;
+  margin-bottom: 6vw;
 }
 
 .c-moor-8 span:nth-child(2) {
