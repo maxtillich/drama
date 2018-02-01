@@ -46,6 +46,53 @@ body {
   height: 100000px;
 }
 
+.deckel {
+  font-family: "eskapade-fraktur";
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%) rotate(-8deg);
+  -ms-transform: translate(-50%, -50%) rotate(-8deg);
+  transform: translate(-50%, -50%) rotate(-8deg);
+  font-size: 7.5em;
+  color: #564fd8;
+  font-weight: 600;
+  font-style: italic;
+  letter-spacing: .02em;
+  line-height: 1;
+  text-align: center;
+  z-index: 999;
+}
+
+.deckel-friedrich {
+  display: inline-block;
+  position: relative;
+  font-size: 1.7rem;
+  letter-spacing: 0;
+  bottom: -.5em;
+  font-weight: 400;
+}
+
+.deckel-title {
+  display: inline-block;
+  position: relative;
+  font-size: 1.7rem;
+  letter-spacing: 0;
+  top: -.5em;
+  font-weight: 400;
+}
+
+.deckel-schiller {
+  position: absolute;
+  bottom: 4vw;
+  left: 0;
+  right: 0;
+  text-align: center;
+  width: 100%;
+  z-index: 998;
+  color: rgba(0,0,0,0.7);
+}
+
 .columns {
   position: fixed;
   top: 0;
@@ -510,7 +557,7 @@ p {
 
 .c-moor-9a {
   top: auto;
-  bottom: 14vw;
+  bottom: 11vw;
   font-size: .8rem;
   line-height: 1.1rem;
 }
@@ -529,6 +576,7 @@ p {
   top: 17vw;
   font-size: 1.55rem;
   line-height: 1.2em;
+  width: 130%;
 }
 
 .c-amalia-12 {
@@ -553,7 +601,7 @@ p {
 }
 
 .figure-klavier-2 {
-  top: 57vh;
+  top: 60.5vh;
   background-image: url(../img/klavierhand.png);
   width: 28vw;
   height: 13vw;
